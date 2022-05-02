@@ -51,5 +51,86 @@
   outline: none;
   border: none;
 }
+.app .boards__item .form {
+  display: none;
+  border-radius: 3px;
+  margin-top: auto;
+}
+.app .boards__item .form .textarea {
+  resize: none;
+  height: 60px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background: white;
+  padding: 10px;
+}
+.app .boards__item .form .textarea:focus {
+  outline: none;
+}
+.app .boards__item .form .buttons {
+  display: flex;
+}
+.app .boards__item .form .buttons .add__item-btn {
+  background: #0d88da;
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 100%;
+}
+.app .boards__item .form .buttons .cancel__item-btn {
+  padding: 0 10px;
+  background: #a0110c;
+  border-radius: 3px;
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.app .boards__item .add-btn {
+  height: 30px;
+  background: rgba(155, 155, 155, 0.3);
+  border-radius: 3px;
+  margin-top: 5px;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  padding-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+.app .boards__item .add-btn span {
+  font-size: 20px;
+  margin-right: 5px;
+  color: white;
+}
+.app .add__boards-btn {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(47, 252, 41, 0.6);
+  border-radius: 3px;
+  border: none;
+  width: 150px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  cursor: pointer;
+  color: white;
+  transform: translate(-50%);
+}
 
 /*# sourceMappingURL=main.css.map */
