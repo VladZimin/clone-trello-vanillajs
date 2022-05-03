@@ -8,11 +8,10 @@
 
 .app {
   display: flex;
-  flex-direction: column;
   width: 100vw;
   height: 100vh;
   padding: 50px 0;
-  background: url("../img/cool-background.png") center / cover no-repeat;
+  background: url("../img/background.png") center / cover no-repeat;
   .boards {
     display: flex;
     width: 100%;
@@ -22,17 +21,28 @@
       align-self: baseline;
       max-width: 250px;
       width: 100%;
-      background-color: rgba(0,0,0, .5);
+      background-color: rgba(27, 28, 28, 0.6);
       margin: 0 15px;
       padding: 10px;
       transition: .3s all ease;
       border-radius: 3px;
-      .title {
-        padding: 5px;
-        &:focus {
-          outline: 1px solid rgba(168,168,168, .45);
+      .board__header {
+        display: flex;
+        justify-content: space-between;
+        .title {
+          color: #f3f5fa;
+          padding: 5px;
+          &:focus {
+            outline: 1px solid rgba(168,168,168, .45);
+          }
+        }
+        .remove__board {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
         }
       }
+
       .list {
         min-height: 40px;
         &__item {
@@ -67,7 +77,7 @@
         .buttons {
           display: flex;
           .add__item-btn {
-            background: rgb(13, 136, 218);
+            background: rgb(76, 126, 253);
             border: none;
             height: 35px;
             cursor: pointer;
@@ -81,7 +91,7 @@
           }
           .cancel__item-btn {
             padding: 0 10px;
-            background: rgb(160,17,12);
+            background: rgb(255, 81, 76);
             border-radius: 3px;
             border: none;
             height: 35px;
@@ -97,38 +107,23 @@
         }
       }
       .add-btn {
-        height: 30px;
-        background: rgba(155,155,155, .3);
-        border-radius: 3px;
-        margin-top: 5px;
-        display: flex;
-        font-size: 12px;
-        align-items: center;
-        padding-left: 10px;
-        color: white;
+        margin-left: 40%;
+        text-align: center;
+        height: 35px;
+        width: 40px;
+        margin-top: 10px;
         cursor: pointer;
-        span {
-          font-size: 20px;
-          margin-right: 5px;
-          color: white;
-        }
+
       }
     }
   }
   .add__board-btn {
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(47, 252, 41, 0.6);
-    border-radius: 3px;
-    border: none;
-    width: 150px;
+    height: 60px;
+    width: 60px;
     position: absolute;
     bottom: 50px;
     left: 50%;
     cursor: pointer;
-    color: white;
     transform: translate(-50%);
   }
 }

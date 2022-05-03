@@ -51,12 +51,16 @@ const addBoard = () => {
   const newBoard = document.createElement('div')
   newBoard.classList.add('boards__item')
   newBoard.innerHTML =
-      `<span contenteditable="true" class="title">Введите название</span>
+      `<div class="board__header">
+        <span contenteditable="true" class="title">Введите название</span>
+        <img src="../img/removeBoard.png" class="remove__board" alt="Remove Board">
+      </div>
       <div class="list"></div>`
   boards.append(newBoard)
 
   changeTitle()
   dragAndDrop()
+  removeBoard()
 }
 
 addBoardBtn.addEventListener('click', addBoard)
@@ -94,7 +98,7 @@ const dragAndDrop = () => {
     })
 
     item.addEventListener('dblclick', () => {
-      item.remove()
+      if (window.confirm('Действительно хотите удалить таску?')) item.remove()
     })
 
     for (let j = 0; j < lists.length; j++) {
@@ -114,6 +118,19 @@ const dragAndDrop = () => {
       })
     }
   }
+}
+
+const removeBoard = () => {
+  const boards = document.querySelectorAll('.boards__item')
+  const removeBoardButtons = document.querySelectorAll('.remove__board')
+
+  for (let i = 0; i < removeBoardButtons.length; i++) {
+    const btn = removeBoardButtons[i]
+    btn.addEventListener('click', () => {
+      boards[i+1].remove()
+    })
+  }
+
 }
 
 dragAndDrop()
